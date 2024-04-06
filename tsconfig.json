@@ -10,8 +10,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "types": [
-      "node",
-      "bun-types"
+      "node"
     ],
     /* Bundler mode */
     "moduleResolution": "bundler",

@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@assets': resolve(__dirname, 'src/assets'),
+      '@assets': resolve(import.meta.dir, '**/assets'),
     },
   },
   server: {
@@ -15,5 +15,6 @@ export default defineConfig({
       usePolling: true,
     },
   },
+  assetsInclude: ['mp3'],
   exclude: ['src/_codux/**'],
 });
