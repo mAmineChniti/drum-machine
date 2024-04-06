@@ -4,10 +4,9 @@ import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
+  plugins: [react()], resolve: {
     alias: {
-      '@assets': resolve(import.meta.dir, '**/assets'),
+      '@assets': resolve(__dirname, '**/assets'),
     },
   },
   server: {
