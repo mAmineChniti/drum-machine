@@ -6,13 +6,7 @@ import { resolve } from 'path';
 export default defineConfig({
         plugins: [
                 react(),
-        ]
-        ,
-        resolve: {
-                alias: {
-                        '@assets': resolve(__dirname, 'public/assets'),
-                },
-        },
+        ],
         server: {
                 watch: {
                         usePolling: true,
