@@ -10,7 +10,7 @@ export default defineConfig({
         ,
         resolve: {
                 alias: {
-                        '@assets': resolve(__dirname, './assets'),
+                        '@assets': resolve(__dirname, 'assets'),
                 },
         },
         server: {
