@@ -4,16 +4,19 @@ import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()], resolve: {
-    alias: {
-      '@assets': resolve(__dirname, '**/assets'),
-    },
-  },
-  server: {
-    watch: {
-      usePolling: true,
-    },
-  },
-  assetsInclude: ['mp3'],
-  exclude: ['src/_codux/**'],
+        plugins: [
+                react(),
+        ]
+        ,
+        resolve: {
+                alias: {
+                        '@assets': resolve(__dirname, './assets'),
+                },
+        },
+        server: {
+                watch: {
+                        usePolling: true,
+                },
+        },
+        exclude: ['src/_codux/**']
 });
