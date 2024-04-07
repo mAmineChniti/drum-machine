@@ -14,9 +14,8 @@ export const SoundButtonsCollection: React.FC<SoundButtonsCollectionProps> = ({ 
 
         useEffect(() => {
                 const fetchAudioPaths = async () => {
-                        const files = import.meta.glob('/assets/*.mp3');
+                        const files = import.meta.glob('*.mp3');
                         const paths = Object.keys(files);
-                        console.log(paths);
                         setAudioPaths(paths);
                 };
                 fetchAudioPaths();
@@ -27,7 +26,7 @@ export const SoundButtonsCollection: React.FC<SoundButtonsCollectionProps> = ({ 
                         {audioPaths.map((path, index) => (
                                 <SoundButton
                                         key={index}
-                                        audioPath={`/assets/${path}`}
+                                        audioPath={path}
                                         audioName={getFileName(path)}
                                 />
                         ))}
