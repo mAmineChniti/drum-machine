@@ -14,7 +14,7 @@ export const SoundButtonsCollection: React.FC<SoundButtonsCollectionProps> = ({ 
 
         useEffect(() => {
                 const fetchAudioPaths = async () => {
-                        const files = import.meta.glob('./**/*.mp3');
+                        const files = import.meta.glob('./**.mp3');
                         const paths = Object.keys(files);
                         setAudioPaths(paths);
                 };
