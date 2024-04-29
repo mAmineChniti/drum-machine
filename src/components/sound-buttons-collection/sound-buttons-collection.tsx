@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { SoundButton } from '../sound-button/sound-button';
 import audioFiles from '**.mp3';
-interface SoundButtonsCollectionProps {}
+interface SoundButtonsCollectionProps { }
 
 export function getFileName(path: string): string {
   const filenameWithExtension = path.split('/').pop() || '';
@@ -11,7 +11,7 @@ export function getFileName(path: string): string {
 
 export const SoundButtonsCollection: React.FC<
   SoundButtonsCollectionProps
-> = ({}) => {
+> = ({ }) => {
   const [audioPaths, setAudioPaths] = useState<string[]>([]);
 
   useEffect(() => {
