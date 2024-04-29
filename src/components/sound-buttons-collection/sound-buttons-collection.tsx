@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { SoundButton } from '../sound-button/sound-button';
-
+import audioFiles from '**.mp3';
 interface SoundButtonsCollectionProps {}
 
 export function getFileName(path: string): string {
@@ -16,12 +16,7 @@ export const SoundButtonsCollection: React.FC<
 
   useEffect(() => {
     const fetchAudioPaths = async () => {
-      const response = await fetch('/assets/*.mp3');
-      if (!response.ok) {
-        throw new Error('Failed to fetch audio paths');
-      }
-      const data = await response.text(); // Get file paths as text
-      const paths = data.split('\n').filter((path) => path);
+      const paths = Object.keys(audioFiles).map((fileName) => fileName);
       setAudioPaths(paths);
     };
 
